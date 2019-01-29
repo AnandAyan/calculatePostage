@@ -3,9 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Calculator from './component/calculate_main';
 import { connect } from 'react-redux';
-import {calculatPost} from './action'
+import {calculatPost,serviceType} from './action'
 const calculateRate = (state) => {
-  console.log(state);
   return state;
 }
 class App extends Component {
@@ -15,11 +14,12 @@ class App extends Component {
   }
 }
 const mapStateToProps = state => ({
-  postRate: calculateRate(state) // state to update
+  postRate: calculateRate(state.calculate) // state to update
 })
 
 const mapDispatchToProps = dispatch => ({
-  calculatPost: id => dispatch(calculatPost(id)) // action to dispatch
+  calculatPost: id => dispatch(calculatPost(id)),
+  serviceType: service => dispatch(serviceType(service)) // action to dispatch
 })
 
 export default connect(

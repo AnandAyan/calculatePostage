@@ -9,9 +9,9 @@ export const calculatPost = payload => ({
   type: 'CALCULATEPOST',
   payload
 })
-
-export const toggleTodo = payload => ({
-  type: 'TOGGLE_TODO',
+ 
+export const serviceType = payload => ({
+  type: 'SERVICE_TYPE',
   payload
 })
 

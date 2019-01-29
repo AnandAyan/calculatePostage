@@ -3,22 +3,23 @@
 const initialState = {
     postageAmount: 0,
     gst: 0,
-    totalAmount:  0     
+    totalAmount:  0 ,
+    services_type: 'dom'    
   }
   export default function calculateReducers(state=initialState, action) {
     switch(action.type) {
       case 'CALCULATEPOST':
-      
-        return {
-          ...action.payload,
-          isLoading: true
-      };
-      
-      case 'FETCH_SEARCH_SUCCESS':
+     
         return {
           ...state,
-          payload: action.payload,
-          isLoading: false
+          totalAmount:action.payload
+      };
+      
+      case 'SERVICE_TYPE':
+        return {
+          ...state,
+          services_type: action.payload,
+ 
         };
      
       default:
