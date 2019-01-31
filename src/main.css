@@ -1,0 +1,27 @@
+.pg-cal .row{
+    border: 1px solid #e4e4e4;
+    background: #ccc;
+    padding: 25px;
+}
+.pg-cal .row .row{padding: 25px 0; }
+input[type=radio]{
+    display: none;
+}
+input[type=radio]+label{ margin-right: 25px; position: relative;}
+input[type=radio]+label::before,input[type=radio]+label::after{
+  content: ""; display: inline-block; width: 15px;height: 15px;
+  border: 1px solid #fff;
+  position: absolute;
+  left: -20px;
+  top:5px; border-radius:100%;
+  transition: all 350ms ease-in-out;  
+  z-index: 1;
+}
+input[type=radio]:checked+label::before{
+background: #8e8e8e;    border-color: #ccc;
+}
+input[type=radio]:checked+label::after{
+    border-color: #8e8e8e;
+    transform: scale(1.3);
+    }
+    h5{margin-bottom: 10px; }

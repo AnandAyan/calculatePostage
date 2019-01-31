@@ -15,4 +15,8 @@ export const serviceType = payload => ({
   payload
 })
 
+export const articleDetailSum = payload => ({
+  type: 'ARTICLE_DETAIL',
+  payload
+})
  

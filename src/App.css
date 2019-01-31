@@ -30,3 +30,6 @@
     transform: rotate(360deg);
   }
 }
+.btn-primary{
+  background: #A42823;    border-color: #d43f3a;
+}

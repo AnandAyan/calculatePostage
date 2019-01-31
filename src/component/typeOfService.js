@@ -7,10 +7,10 @@ const TypeOfService = ({ onchangeServices }) => {
     }
     return  (
     
-        <div> 
-          <input id='dom' defaultChecked type='radio' name='servicewsType' value="dom" onChange = {seervicesChange}/> <label htmlFor="dom">Domestic</label> 
-          <input id='int' type='radio' name='servicewsType' value="int" onChange = {seervicesChange}/> <label htmlFor="int">International</label> 
-          <input id='mis' type='radio' name='servicewsType' value="mis" onChange = {seervicesChange}/> <label htmlFor="mis">Miscellaneous</label> 
+        <div className="form-check"> 
+          <input className="form-check-input" id='dom' defaultChecked type='radio' name='servicewsType' value="dom" onChange = {seervicesChange}/> <label htmlFor="dom">Domestic</label> 
+          <input className="form-check-input" id='int' type='radio' name='servicewsType' value="int" onChange = {seervicesChange}/> <label htmlFor="int">International</label> 
+          <input className="form-check-input" id='mis' type='radio' name='servicewsType' value="mis" onChange = {seervicesChange}/> <label htmlFor="mis">Miscellaneous</label> 
         </div>
       )
 }

@@ -8,21 +8,21 @@ const SendForm = ({ services_type, onchangePinCode, locationDetails }) => {
     return  (
     
         <div>
-            <p> servicew type {services_type}</p>
+ 
            { services_type === 'dom' && <div className="dom">
-                <p><label>Pincode</label> <input placeholder="#1234"/> </p>
-                <p><label>City / District</label> <input placeholder="#1234"/> </p>
-                <p><label>State</label> <input placeholder="#1234"/> </p>
+                <div className="form-group"><label>Pincode</label> <input className="form-control"  /> </div>
+                <div><label>City / District</label> <input className="form-control" /> </div>
+                <div><label>State</label> <input className="form-control"  /> </div>
             </div>}
             {services_type === 'int' && <div className="int">
-                <p><label>Country</label>  
-                <select>
+                <div><label>Country</label>  
+                <select className="form-control">
                     <option value="au"> Austrilia</option>
                     <option value="uk"> United Kingdom</option>
                     <option value="us"> United states</option>
                     <option value="ru"> Russia</option>
                 </select>
-                </p>
+                </div>
 
             </div>}
         </div>
